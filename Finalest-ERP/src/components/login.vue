@@ -97,7 +97,7 @@ export default {
       loginAjax:function(){
           let _this=this;
           //if(表单验证通过)发送ajax
-          _this.$axios.posts('/api/TokenAuth/Authenticate',_this.login)
+          _this.$axios.posts('http://192.168.100.107:8082/api/TokenAuth/Authenticate',_this.login)
           .then(function (res) {
                 //成功之后处理逻辑
                 let flag=false;
@@ -172,18 +172,21 @@ export default {
         /*background-image: url(../../static/image/login/product.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100% ;*/
+        overflow: hidden;
     }
     .loginWrapper .leftDiv .leftDivleft img{
         position: absolute;
         top: 0;
         left: 0;
+        /*width:  100%;*/
         height: 100%;
+        min-height: 680px;
     }
     .loginWrapper .loginForm{
         /*float: left;
         width: 49%;*/
 
-        height: 70%;
+        height: 69%;
         background-repeat: no-repeat;
         background-position: right bottom;
         -moz-user-select:none;
@@ -208,7 +211,8 @@ export default {
         position: relative;
         right: 0;
         bottom: 0;
-        width: 100%;;
+        width: 100%;
+
     }
      .choose{
         float: right;
