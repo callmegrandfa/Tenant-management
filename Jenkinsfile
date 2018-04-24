@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Clear Container') {
       steps {
-        sh ''' #!/bin/sh
+        sh '''#!/bin/sh
 docker container prune << EOF
 y
 EOF
