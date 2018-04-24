@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import store from './store'
-import router from './router'//路由
+import router from './router/indexc.js'//路由
 import ElementUI from 'element-ui'//UI组件http://element-cn.eleme.io
 import 'element-ui/lib/theme-chalk/index.css'
 import SimpleVueValidation from 'simple-vue-validator'//表单验证http://simple-vue-validator.maijin.info

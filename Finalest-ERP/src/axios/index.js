@@ -1,5 +1,5 @@
 import store from '../store'
-import router from '../router'
+import router from '../router/indexc.js'
 import axios from 'axios'
 import qs from 'qs'
 
