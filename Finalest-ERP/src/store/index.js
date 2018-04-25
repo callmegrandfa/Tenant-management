@@ -21,6 +21,16 @@ export default new vuex.Store({
             { name: 'tenant', url: '/tenant/tenantManagement/:id', parent: '', default: '/tenant/tenantManagement/:id' } , //租户管理
             { name: 'tenantManagement', url: '/tenant/tenantManagement/:id', parent: 'tenant' } ,
             { name: 'tenantManagementAdd', url: '/tenant/tenantManagementAdd/:id', parent: 'tenant' } ,
+
+             { name: 'commercial', url: '/commercial/commercialSpecification/:id', parent: '', default: '/commercial/commercialSpecification/:id' } , //租户管理
+            { name: 'commercialSpecification', url: '/commercial/commercialSpecification/:id', parent: 'commercial' } ,
+            { name: 'commercialSpecificationDetails', url: '/commercial/commercialSpecificationDetails/:id', parent: 'commercial' } ,
+            { name: 'commercialSpecificationModify', url: '/commercial/commercialSpecificationModify/:id', parent: 'commercial' } ,
+
+             { name: 'commodityProperty', url: '/commodityProperty/commodityPropertyList/:id', parent: '', default: '/commodityProperty/commodityPropertyList/:id' } , //租户管理
+            { name: 'commodityPropertyList', url: '/commodityProperty/commodityPropertyList/:id', parent: 'commodityProperty' } ,
+            { name: 'commodityPropertyDetails', url: '/commodityProperty/commodityPropertyDetails/:id', parent: 'commodityProperty' } ,
+            { name: 'commodityPropertyModify', url: '/commodityProperty/commodityPropertyModify/:id', parent: 'commodityProperty' } ,
         ],
         icon:[
             {code:'fa fa-address-book',label:"",},

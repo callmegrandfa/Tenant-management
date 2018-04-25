@@ -15,6 +15,14 @@ const home = () =>import(/* webpackChunkName:  "group-index" */'../components/ho
 const shortData = () =>import('../components/dataTemplate/shortData')
 const midData = () =>import('../components/dataTemplate/midData')
 const longData = () =>import('../components/dataTemplate/longData')
+const commercial = () =>import('../components/commodityManagement/commercial')
+const commercialSpecification = () =>import('../components/commodityManagement/commercialSpecification')
+const commercialSpecificationDetails = () =>import('../components/commodityManagement/commercialSpecificationDetails')
+const commercialSpecificationModify = () =>import('../components/commodityManagement/commercialSpecificationModify')
+const commodityProperty = () =>import('../components/commodityManagement/commodityProperty')
+const commodityPropertyList = () =>import('../components/commodityManagement/commodityPropertyList')
+const commodityPropertyDetails = () =>import('../components/commodityManagement/commodityPropertyDetails')
+const commodityPropertyModify = () =>import('../components/commodityManagement/commodityPropertyModify')
 const tenant = () =>import('../components/tenantManagement/tenant')
 const tenantManagement = () =>import('../components/tenantManagement/tenantManagement')
 const tenantManagementAdd = () =>import('../components/tenantManagement/tenantManagementAdd')
@@ -107,6 +115,40 @@ children:[
   },children:[
       { path: '/tenant/tenantManagement/:id', component: tenantManagement,name:'tenantManagement' },
       { path: '/tenant/tenantManagementAdd/:id', component: tenantManagementAdd,name:'tenantManagementAdd' },
+  ]},
+  { path: '/commercial', component: commercial,name:'commercial',redirect: function(){//租户管理
+    let name='commercial';
+    let activeRouter=store.state.activeRouter;
+
+    for(let i=0;i<activeRouter.length;i++){
+        if(activeRouter[i].name==name){
+          
+          return activeRouter[i].url;
+
+          break;
+        }
+    }
+  },children:[
+      { path: '/commercial/commercialSpecification/:id', component: commercialSpecification,name:'commercialSpecification' },
+      { path: '/commercial/commercialSpecificationDetails/:id', component: commercialSpecificationDetails,name:'commercialSpecificationDetails' },
+      { path: '/commercial/commercialSpecificationModify/:id', component: commercialSpecificationModify,name:'commercialSpecificationModify' },
+  ]},
+  { path: '/commodityProperty', component: commodityProperty,name:'commodityProperty',redirect: function(){//租户管理
+    let name='commodityProperty';
+    let activeRouter=store.state.activeRouter;
+
+    for(let i=0;i<activeRouter.length;i++){
+        if(activeRouter[i].name==name){
+          
+          return activeRouter[i].url;
+
+          break;
+        }
+    }
+  },children:[
+      { path: '/commodityProperty/commodityPropertyList/:id', component: commodityPropertyList,name:'commodityPropertyList' },
+      { path: '/commodityProperty/commodityPropertyDetails/:id', component: commodityPropertyDetails,name:'commodityPropertyDetails' },
+      { path: '/commodityProperty/commodityPropertyModify/:id', component: commodityPropertyModify,name:'commodityPropertyModify' },
   ]},
 ]}
 ]

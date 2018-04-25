@@ -70,7 +70,13 @@ export default {
                 thirdInfo:[
                     {name:'租户管理',address:'tenant'},
                 ]
-            },],
+            },{
+                name:'商品管理',
+                thirdInfo:[
+                    {name:'商品属性',address:'commodityProperty'},
+                    {name:'商品规格',address:'commercial'},
+                ]
+            }],
             childNodes:[],//菜单数据
         }
         
