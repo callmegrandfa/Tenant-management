@@ -24,7 +24,7 @@ EOF'''
     }
     stage('Deploy Container') {
       steps {
-        sh 'docker run -d -p 8087:5000 --name=web_tenant web_tenant'
+        sh 'docker run -d -p 8087:8080 --name=web_tenant web_tenant'
       }
     }
   }
