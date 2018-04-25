@@ -1,9 +1,9 @@
 <template>
     <div class="header">
             <div class="menuBtn" @click="showSide">
-                <img class="bar_1" src="..\..\static\image\header\bar.png" alt="">
-                <img class="bar_2" src="..\..\static\image\header\bar.png" alt="">
-                <img class="bar_3" src="..\..\static\image\header\bar.png" alt="">
+                <img class="bar_1" src="../../static/image/header/bar.png" alt="">
+                <img class="bar_2" src="../../static/image/header/bar.png" alt="">
+                <img class="bar_3" src="../../static/image/header/bar.png" alt="">
                 <!-- <i class="fa fa-bars" aria-hidden="true"></i> -->
             </div>
             <div class="pageLogo">
