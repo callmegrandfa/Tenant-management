@@ -140,11 +140,11 @@
                         <span>本周未审核</span>
                         <div @click='cancelweek1'>
                             <img class="white-one" 
-                                src="../../assets\whiteone.png"
+                                src="../../assets/whiteone.png"
                                 v-if='canEdit'>
 
                             <img class="red-bg" 
-                                src="../../assets\redcircle.png" 
+                                src="../../assets/redcircle.png" 
                                 v-if='canEdit'>
                         </div>
                     </li>
@@ -153,11 +153,11 @@
                         <span>本周已审核</span>
                         <div @click='cancelweek2'>
                             <img class="white-one" 
-                                src="../../assets\whiteone.png"
+                                src="../../assets/whiteone.png"
                                 v-if='canEdit'>
 
                             <img class="red-bg" 
-                                src="../../assets\redcircle.png" 
+                                src="../../assets/redcircle.png" 
                                 v-if='canEdit'>
                         </div>
                     </li>
@@ -225,7 +225,7 @@
                     <el-col :span="15" :offset="2" class="search-depend-after">
                         <el-row class="search-box">
                             <el-col :span="2" class="logo-p">
-                                 <img src="../../assets\searchLogo.png" alt="">
+                                 <img src="../../assets/searchLogo.png" alt="">
                             </el-col>
                            <el-col :span="18" :offset="1">
                                <input type="text" placeholder="请输入货号">
@@ -241,7 +241,7 @@
                     <el-col :span="15" :offset="2" class="search-depend-after">
                         <el-row class="search-box">
                             <el-col :span="2" class="logo-p">
-                                 <img src="../../assets\searchLogo.png" alt="">
+                                 <img src="../../assets/searchLogo.png" alt="">
                             </el-col>
                            <el-col :span="18" :offset="1">
                                <input type="text" placeholder="请输入供应商">
@@ -257,7 +257,7 @@
                     <el-col :span="15" :offset="2" class="search-depend-after">
                         <el-row class="search-box">
                             <el-col :span="2" class="logo-p">
-                                 <img src="../../assets\searchLogo.png" alt="">
+                                 <img src="../../assets/searchLogo.png" alt="">
                             </el-col>
                            <el-col :span="18" :offset="1">
                                <input type="text" placeholder="请输入仓库">
@@ -273,7 +273,7 @@
                     <el-col :span="15" :offset="2" class="search-depend-after">
                         <el-row class="search-box">
                             <el-col :span="2" class="logo-p">
-                                 <img src="../../assets\searchLogo.png" alt="">
+                                 <img src="../../assets/searchLogo.png" alt="">
                             </el-col>
                            <el-col :span="18" :offset="1">
                                <input type="text" placeholder="请输入PO单号">
@@ -289,7 +289,7 @@
                     <el-col :span="15" :offset="2" class="search-depend-after">
                         <el-row class="search-box">
                             <el-col :span="2" class="logo-p">
-                                 <img src="../../assets\searchLogo.png" alt="">
+                                 <img src="../../assets/searchLogo.png" alt="">
                             </el-col>
                            <el-col :span="18" :offset="1">
                                <input type="text" placeholder="请输入PO类型">
@@ -305,7 +305,7 @@
                     <el-col :span="15" :offset="2" class="search-depend-after">
                         <el-row class="search-box">
                             <el-col :span="2" class="logo-p">
-                                 <img src="../../assets\searchLogo.png" alt="">
+                                 <img src="../../assets/searchLogo.png" alt="">
                             </el-col>
                            <el-col :span="18" :offset="1">
                                <input type="text" placeholder="请输入品牌">
