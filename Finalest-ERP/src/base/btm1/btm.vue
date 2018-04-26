@@ -108,10 +108,11 @@
 	.bt_eraseline{
 		background-color: rgb(255,102,0);
 	}
-</style>
-<style>
 	.false{
 		background-color: #ccc !important;
 		padding: 0 10px !important;
 	}
+</style>
+<style>
+	
 </style>
