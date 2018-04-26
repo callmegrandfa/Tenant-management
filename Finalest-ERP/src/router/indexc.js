@@ -26,6 +26,13 @@ const commodityPropertyModify = () =>import('../components/commodityManagement/c
 const tenant = () =>import('../components/tenantManagement/tenant')
 const tenantManagement = () =>import('../components/tenantManagement/tenantManagement')
 const tenantManagementAdd = () =>import('../components/tenantManagement/tenantManagementAdd')
+
+const commodityleimu = () =>import('../components/commodityManagement/commodityleimu')
+const commodityClassHeading = () =>import('../components/commodityManagement/commodityClassHeading')
+const CommodityCategoriesDetails = () =>import('../components/commodityManagement/CommodityCategoriesDetails')
+
+const attributeSpecification = () =>import('../components/commodityManagement/attributeSpecification/attributeSpecification')
+const attributeSpecificationDetail = () =>import('../components/commodityManagement/attributeSpecification/attributeSpecificationDetail')
 let redirectRouter=function(routerName) {//重定向
     let activeRouter=store.state.activeRouter;
     for(let i=0;i<activeRouter.length;i++){
@@ -116,6 +123,22 @@ children:[
       { path: '/tenant/tenantManagement/:id', component: tenantManagement,name:'tenantManagement' },
       { path: '/tenant/tenantManagementAdd/:id', component: tenantManagementAdd,name:'tenantManagementAdd' },
   ]},
+  { path: '/commodityleimu', component: commodityleimu,name:'commodityleimu',redirect: function(){//租户管理
+    let name='commodityleimu';
+    let activeRouter=store.state.activeRouter;
+
+    for(let i=0;i<activeRouter.length;i++){
+        if(activeRouter[i].name==name){
+          
+          return activeRouter[i].url;
+
+          break;
+        }
+    }
+  },children:[
+      { path: '/commodityleimu/commodityClassHeading/:id', component: commodityClassHeading,name:'commodityClassHeading' },
+      { path: '/commodityleimu/CommodityCategoriesDetails/:id', component: CommodityCategoriesDetails,name:'CommodityCategoriesDetails' },
+  ]},
   { path: '/commercial', component: commercial,name:'commercial',redirect: function(){//租户管理
     let name='commercial';
     let activeRouter=store.state.activeRouter;
@@ -132,6 +155,21 @@ children:[
       { path: '/commercial/commercialSpecification/:id', component: commercialSpecification,name:'commercialSpecification' },
       { path: '/commercial/commercialSpecificationDetails/:id', component: commercialSpecificationDetails,name:'commercialSpecificationDetails' },
       { path: '/commercial/commercialSpecificationModify/:id', component: commercialSpecificationModify,name:'commercialSpecificationModify' },
+  ]},
+  { path: '/attributeSpecification', component: commercial,name:'attributeSpecification',redirect: function(){//租户管理
+    let name='attributeSpecification';
+    let activeRouter=store.state.activeRouter;
+
+    for(let i=0;i<activeRouter.length;i++){
+        if(activeRouter[i].name==name){
+          
+          return activeRouter[i].url;
+
+          break;
+        }
+    }
+  },children:[
+      { path: '/attributeSpecification/attributeSpecificationDetail/:id', component: attributeSpecificationDetail,name:'attributeSpecificationDetail' },
   ]},
   { path: '/commodityProperty', component: commodityProperty,name:'commodityProperty',redirect: function(){//租户管理
     let name='commodityProperty';

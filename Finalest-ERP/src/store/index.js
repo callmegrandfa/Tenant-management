@@ -22,6 +22,13 @@ export default new vuex.Store({
             { name: 'tenantManagement', url: '/tenant/tenantManagement/:id', parent: 'tenant' } ,
             { name: 'tenantManagementAdd', url: '/tenant/tenantManagementAdd/:id', parent: 'tenant' } ,
 
+            { name: 'commodityleimu', url: '/commodityleimu/commodityClassHeading/:id', parent: '', default: '/commodityleimu/commodityClassHeading/:id' } , //租户管理
+            { name: 'commodityClassHeading', url: '/commodityleimu/commodityClassHeading/:id', parent: 'commodityleimu' } ,
+            { name: 'CommodityCategoriesDetails', url: '/commodityleimu/CommodityCategoriesDetails/:id', parent: 'commodityleimu' } ,
+           
+            { name: 'attributeSpecification', url: '/attributeSpecification/attributeSpecificationDetail/:id', parent: '', default: '/attributeSpecification/attributeSpecificationDetail/:id' } , //租户管理
+            { name: 'attributeSpecificationDetail', url: '/tenant/attributeSpecificationDetail/:id', parent: 'attributeSpecification' } ,
+
              { name: 'commercial', url: '/commercial/commercialSpecification/:id', parent: '', default: '/commercial/commercialSpecification/:id' } , //租户管理
             { name: 'commercialSpecification', url: '/commercial/commercialSpecification/:id', parent: 'commercial' } ,
             { name: 'commercialSpecificationDetails', url: '/commercial/commercialSpecificationDetails/:id', parent: 'commercial' } ,

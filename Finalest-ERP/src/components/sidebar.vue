@@ -30,19 +30,19 @@
                 <span class="menuIcon" :moduleParentId="item.moduleParentId" :menuname="item.moduleName" :menuUrl="item.url"><i :class="item.ico" style="color:#fff"></i></span>
                 <a class="oneA" href="javascript:;" :moduleParentId="item.moduleParentId" :menuname="item.moduleName" :menuUrl="item.url">{{item.moduleName}}</a>
                 <ul class="slidUl slid1">
-                    <vue-scroll :ops="ops">
+                    <vue-scroll :key="item.id" :ops="ops">
                         <li class="two" v-for="i in item.childNodes"  @mouseenter="enter2">
                             <!-- <span class="menuIcon" :moduleParentId="item.moduleParentId" :menuname="item.moduleName" :menuUrl="item.url" @click="storageData"><i :class="i.ico"></i></span> -->
-                            <a href="javascript:;" :moduleParentId="item.moduleParentId" :menuname="item.moduleName" :menuUrl="item.url">{{i.moduleName}}</a>
+                            <a href="javascript:;" @click="storageData" :moduleParentId="i.moduleParentId" :menuname="i.moduleName" :menuUrl="i.url">{{i.moduleName}}</a>
                             <diV class="triangle"></diV>
-                            <ul class="slidUl slid2" >
-                                <vue-scroll :ops="ops">
+                            <!-- <ul class="slidUl slid2" v-show="i.childNodes.length>0" > -->
+                                <!-- <vue-scroll :key="i.id" :ops="ops">
                                     <li class="three" v-for="it in i.childNodes">
-                                        <!-- <span class="menuIcon" :moduleParentId="item.moduleParentId" :menuname="item.moduleName" :menuUrl="item.url" @click="storageData"><i :class="i.ico"></i></span> -->
-                                        <a href="javascript:;" :menuId="it.id" :moduleParentId="it.moduleParentId" :menuUrl="it.url" :menuname="it.moduleName" @click="storageData">{{it.moduleName}}</a>
+                                         <span class="menuIcon" :moduleParentId="item.moduleParentId" :menuname="item.moduleName" :menuUrl="item.url" @click="storageData"><i :class="i.ico"></i></span> -->
+                                        <!-- <a href="javascript:;" :menuId="it.id" :moduleParentId="it.moduleParentId" :menuUrl="it.url" :menuname="it.moduleName" @click="storageData">{{it.moduleName}}</a>
                                     </li>
-                                </vue-scroll> 
-                            </ul>
+                                </vue-scroll>  -->
+                            <!-- </ul> -->
                         </li>
                     </vue-scroll>     
                 </ul>
@@ -65,19 +65,44 @@ export default {
             },
         },
         ids:[],
-        secondLevel1:[{
-                name:'租户管理',
-                thirdInfo:[
-                    {name:'租户管理',address:'tenant'},
-                ]
-            },{
-                name:'商品管理',
-                thirdInfo:[
-                    {name:'商品属性',address:'commodityProperty'},
-                    {name:'商品规格',address:'commercial'},
-                ]
-            }],
-            childNodes:[],//菜单数据
+        secondLevel1:[
+            // {
+            //     name:'租户管理',
+            //     thirdInfo:[
+            //         {name:'租户管理',address:'tenant'},
+            //     ]
+            // },{
+            //     name:'商品管理',
+            //     thirdInfo:[
+            //         {name:'商品属性',address:'commodityProperty'},
+            //         {name:'商品规格',address:'commercial'},
+            //     ]
+            // }
+            ],
+            childNodes:[{
+                id:1,
+                moduleparentid:0,
+                moduleName:'商品管理',
+                menuurl:'srting',
+                ico:'fa fa-suitcase',
+                childNodes:[{
+                    moduleParentId:1,
+                    moduleName:'商品属性',
+                    url:'commodityProperty'
+                },{
+                    moduleParentId:1,
+                    moduleName:'商品规格',
+                    url:'commercialSpecification'
+                },{
+                    moduleParentId:1,
+                    moduleName:'类目属性规格',
+                    url:'attributeSpecification'
+                },{
+                    moduleParentId:1,
+                    moduleName:'商品类目',
+                    url:'commodityleimu'
+                }]
+            }],//菜单数据
         }
         
     },
