@@ -144,7 +144,7 @@ export default {
     position: fixed;
     width: 100%;
     height: 50px;
-    background-color: #3facac;
+    background-color: rgba(53, 64, 82, 1);
     z-index: 1000;
 }
 .header .pageLogo{
@@ -157,9 +157,9 @@ export default {
 .header .pageLogo a{
     position: relative;
     width: 107px;
-    line-height: 31px;
     cursor: pointer;
     height: 31px;
+    line-height:31px; 
     margin-top: 10px;
     margin-left: 15px;
     display: block;
@@ -187,12 +187,12 @@ export default {
     width: 50px;
     height: 50px;
     float: left;
-    background-color: #33cccc;
+    background-color: rgba(65, 78, 97, 1);
     text-align: center;
     line-height: 50px;
     color: #fff;
     font-size: 28px;
-    /* box-shadow: 1px 1px 1px #0000005c; */
+    box-shadow: 1px 1px 1px #0000005c;
 }
 .menuBtn img{
     position: absolute;
@@ -226,9 +226,8 @@ export default {
 .header .search .el-input__inner{
     height: 40px;
     border-radius: 20px;
-    background: #33cccc;
+    background: #26344b;
     border: 0;
-    color: #fff;
 }
 .my-autocomplete li {
     line-height: normal;
@@ -352,7 +351,6 @@ height: 100%;
     border-radius: 50%;
     background-color:#33CCCC; 
 }
-
 
 
 </style>

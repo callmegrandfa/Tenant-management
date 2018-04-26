@@ -7,7 +7,7 @@
             <span class="versionInfo" :class="{infoActive : $store.state.show}">升级信息</span>
         </li>
        <vue-scroll :ops="ops">
-            <li class="one" @mouseenter="enter1">
+            <!-- <li class="one" @mouseenter="enter1">
                 <span class="menuIcon"><img src="../../static/image/siderbar/常用功能.png"></span>
                 <a class="oneA" href="javascript:;">测试</a>
                 <ul class="slidUl slid1">
@@ -25,7 +25,7 @@
                         </li>
                     </vue-scroll> 
                 </ul>
-            </li>
+            </li> -->
             <li class="one" v-for="item in childNodes" :menuId="item.id"  @mouseenter="enter1">
                 <span class="menuIcon" :moduleParentId="item.moduleParentId" :menuname="item.moduleName" :menuUrl="item.url"><i :class="item.ico" style="color:#fff"></i></span>
                 <a class="oneA" href="javascript:;" :moduleParentId="item.moduleParentId" :menuname="item.moduleName" :menuUrl="item.url">{{item.moduleName}}</a>
@@ -97,10 +97,17 @@ export default {
                     moduleParentId:1,
                     moduleName:'类目属性规格',
                     url:'attributeSpecification'
-                },{
+                }]
+            },{
+                id:1,
+                moduleparentid:0,
+                moduleName:'租户管理',
+                menuurl:'srting',
+                ico:'fa fa-address-book',
+                childNodes:[{
                     moduleParentId:1,
-                    moduleName:'商品类目',
-                    url:'commodityleimu'
+                    moduleName:'租户管理',
+                    url:'tenant'
                 }]
             }],//菜单数据
         }
