@@ -182,7 +182,6 @@ export default {
 </script>
 
 <style  scoped>
-
 .slidUl{
     font-family: 'microsoft yahei';
     width: 235px;
@@ -203,6 +202,10 @@ export default {
     float: left;
     text-align: center;
     cursor: pointer;
+    transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s; 
 }
 
 .menuIcon img{
@@ -376,6 +379,9 @@ export default {
     border-top: 10px solid transparent;
     border-right: 10px solid #354052;
     border-bottom: 10px solid transparent;
+}
+.menuActive .menu_active .menuIcon{
+  background-color: #3cc;
 }
 /* .menu::-webkit-scrollbar {
     display: none;

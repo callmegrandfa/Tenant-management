@@ -8,8 +8,9 @@
             </div>
             <div class="pageLogo">
                 <a href="">
-                <img src="../../static/image/login/ERP.png" alt="HKERP">
-                <span>恒康智能云</span>
+                    <h4>恒康租户平台</h4>
+                <!-- <img src="../../static/image/login/ERP.png" alt="HKERP">
+                <span>恒康智能云</span> -->
                 </a> 
             </div>
             <!-- 搜索框 -->
@@ -143,7 +144,7 @@ export default {
     position: fixed;
     width: 100%;
     height: 50px;
-    background-color: rgba(53, 64, 82, 1);
+    background-color: #3facac;
     z-index: 1000;
 }
 .header .pageLogo{
@@ -155,7 +156,8 @@ export default {
 }
 .header .pageLogo a{
     position: relative;
-    width: 70px;
+    width: 107px;
+    line-height: 31px;
     cursor: pointer;
     height: 31px;
     margin-top: 10px;
@@ -185,12 +187,12 @@ export default {
     width: 50px;
     height: 50px;
     float: left;
-    background-color: rgba(65, 78, 97, 1);
+    background-color: #33cccc;
     text-align: center;
     line-height: 50px;
     color: #fff;
     font-size: 28px;
-    box-shadow: 1px 1px 1px #0000005c;
+    /* box-shadow: 1px 1px 1px #0000005c; */
 }
 .menuBtn img{
     position: absolute;
@@ -224,8 +226,9 @@ export default {
 .header .search .el-input__inner{
     height: 40px;
     border-radius: 20px;
-    background: #26344b;
+    background: #33cccc;
     border: 0;
+    color: #fff;
 }
 .my-autocomplete li {
     line-height: normal;
