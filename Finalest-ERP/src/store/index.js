@@ -27,7 +27,7 @@ export default new vuex.Store({
             { name: 'CommodityCategoriesDetails', url: '/commodityleimu/CommodityCategoriesDetails/:id', parent: 'commodityleimu' } ,
            
             { name: 'attributeSpecification', url: '/attributeSpecification/attributeSpecificationDetail/:id', parent: '', default: '/attributeSpecification/attributeSpecificationDetail/:id' } , //租户管理
-            { name: 'attributeSpecificationDetail', url: '/tenant/attributeSpecificationDetail/:id', parent: 'attributeSpecification' } ,
+            { name: 'attributeSpecificationDetail', url: '/attributeSpecification/attributeSpecificationDetail/:id', parent: 'attributeSpecification' } ,
 
              { name: 'commercial', url: '/commercial/commercialSpecification/:id', parent: '', default: '/commercial/commercialSpecification/:id' } , //租户管理
             { name: 'commercialSpecification', url: '/commercial/commercialSpecification/:id', parent: 'commercial' } ,
