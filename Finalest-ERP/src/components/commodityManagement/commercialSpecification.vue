@@ -95,12 +95,12 @@
                             <el-table :data="tableData" border @row-click="rowClick" class="text-center" @selection-change="handleSelectionChange">
                                 <el-table-column prop="name" type="selection" label="" >
                                 </el-table-column>
-                                <el-table-column prop="specCode" label="属性编码">
+                                <el-table-column prop="specCode" label="规格编码">
                                     <template slot-scope="scope">
                                         <el-button type="text" @click="modify(scope.row)"   >{{tableData[scope.$index].specCode}}</el-button>
                                     </template>
                                 </el-table-column>
-                                <el-table-column prop="specName" label="属性名称">
+                                <el-table-column prop="specName" label="规格名称">
                                     <template slot-scope="scope">
                                         <el-button type="text"  @click="modify(scope.row)"  >{{tableData[scope.$index].specName}}</el-button>
                                     </template>
@@ -306,6 +306,14 @@
                 let _this=this;
                 _this.$axios.gets('/api/services/app/SpecManagement/GetAll',{SkipCount:(_this.currentPage-1)*_this.eachPage,MaxResultCount:_this.eachPage}).then(function(res){
                     _this.tableData=res.result.items;
+                    function compare(property){
+                            return function(a,b){
+                                var value1 = a[property];
+                                var value2 = b[property];
+                                return value1 - value2;
+                            }
+                        }
+                        _this.tableData.sort(compare('seq'));
                     for(let i=0;i<_this.tableData.length;i++){
                         if(_this.tableData[i].controlType == 0){
                            _this.tableData[i].controlType = '手工录入' 

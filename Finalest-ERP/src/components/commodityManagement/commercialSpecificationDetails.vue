@@ -9,7 +9,7 @@
                         <el-col :span="24" style="margin-top:20px">
                             <el-col :span="9">
                                 <div class="bgcolor smallBgcolor" >
-                                        <label><small>*</small>属性编码</label>
+                                        <label><small>*</small>规格编码</label>
                                </div>
                             </el-col>
                             <el-col :span="5" >
@@ -22,11 +22,11 @@
                             <div class="error_tips_info">{{ validation.firstError('addData.specCode') }}</div>
                         </el-col>
                     </el-row>    
-                    <el-row class="pl10 pr10">
+                    <el-row class="pl10  pr10">
                         <el-col :span="24" >
                             <el-col :span="9">
                                 <div class="bgcolor smallBgcolor" >
-                                        <label><small>*</small>属性名称</label>
+                                        <label><small>*</small>规格名称</label>
                                </div>
                             </el-col>
                             <el-col :span="5" >

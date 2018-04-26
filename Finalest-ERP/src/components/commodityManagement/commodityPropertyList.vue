@@ -208,7 +208,7 @@
             </el-col>
             
             <span slot="footer">
-                <button class="dialog_footer_bt dialog_font" style="width:100%;" @click="dialogUserConfirm1 = false">确 认</button>
+                <button class="dialog_footer_bt dialog_font" style="width:100%;" @click="dialogUserConfirm1 = false;">确 认</button>
             </span>
         </el-dialog>
         <!-- dialog错误信息提示 -->
@@ -550,6 +550,8 @@ import Tree from '../../base/tree/tree'
                        arr = _this.tableData[i].propertyFullpathId.split('>').length;
                         if(arr > 2 &&  _this.tableData.length == 1){
                             _this.adddefeated = false;
+                        }else{
+                            _this.adddefeated = true;
                         }
                     }
                     let countPage=res.result.totalCount;
