@@ -82,14 +82,14 @@ export default {
         
     },
     created:function(){
-        let _this=this;
-        _this.$axios.gets('/api/services/app/ModuleManagement/GetModulesTree',{id:0})
-        .then(function(res){
-            _this.childNodes=res;
-            console.log(res)
-        },function(res){
+        // let _this=this;
+        // _this.$axios.gets('/api/services/app/ModuleManagement/GetModulesTree',{id:0})
+        // .then(function(res){
+        //     _this.childNodes=res;
+        //     console.log(res)
+        // },function(res){
 
-        })
+        // })
         
     },
     mounted:function(){
